@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lg:flex lg:rounded-lg font-PlusjakartaSans">
+    <div class="py-7 px-5 lg:flex-grow lg:rounded">
+      <header>
+        <div class="lg:flex justify-between">
+          <h2 class="font-plusjakartaSansBold text-[hsl(202_55%_16%)] text-xl">Mortgage Calculator</h1>
+            <button class="text-base underline mb-4 text-inputTextColor lg:hover:cursor-pointer">Clear All</button>
+        </div>
+      </header>
+      <main>
+        <section>
+          <label for="mortgage-amount" class="font-plusjakartaSansMedium text-inputTextColor">Mortgage Amount</label>
+          <div
+            class="js-inputElementContainer flex border-1 border-inputTextBackground rounded-md shadow-md mb-4 mt-2 lg:hover:cursor-pointer lg:hover:border-limeColor">
+            <div
+              class="js-inputTextBackground bg-inputTextBackground py-1 px-2 font-plusjakartaSansBold font-bold text-inputTextColor">
+              &#x20A6
+            </div>
+            <input class="js-input flex-grow focus: outline-0 pl-3 lg:hover:cursor-pointer" type="text"
+              id="mortgage-amount">
+          </div>
+          <div class="lg:flex gap-5">
+            <div>
+              <div for="mortgage-term" class="font-plusjakartaSansMedium text-inputTextColor">Mortgage Term</div>
+              <div
+                class="js-inputElementContainer flex border-1 justify-between border-inputTextBackground rounded-md shadow-md mb-4 mt-2">
+                <input class="js-input flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
+                  id="mortgage-term">
+                <div class="js-inputTextBackground bg-inputTextBackground text-inputTextColor py-1 px-2 font-bold">Years
+                </div>
+              </div>
+            </div>
+            <div>
+              <div for="interest-rate" class="text-inputTextColor font-plusjakartaSansMedium">Interest Rate</div>
+              <div
+                class="js-inputElementContainer flex border-1 justify-between border-inputTextBackground rounded-md shadow-md mb-4 mt-2">
+                <input class="js-input flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
+                  id="interest-rate">
+                <div class="js-inputTextBackground bg-inputTextBackground py-1 px-2 text-inputTextColor font-bold">%
+                </div>
+              </div>
+            </div>
+          </div>
+          <section>
+            <label for="" class="text-inputTextColor font-plusjakartaSansMedium">Mortgage Type</label>
+            <div class="flex flex-col">
+              <label
+                class="font-semibold border-2 pl-3 py-1.5 rounded-lg border-inputTextColor mt-3 lg:hover:border-limeColor lg:hover:cursor-pointer">
+                <input type="radio" name="mortgage-type" value="Repayment" class="mr-3">
+                Repayment
+              </label>
+              <label
+                class="font-semibold border-2 mt-3 pl-3 py-1.5 rounded-lg border-inputTextColor lg:hover:border-limeColor lg:hover:cursor-pointer">
+                <input type="radio" name="mortgage-type" value="Interest Only" class="mr-3">
+                Interest Only
+              </label>
+            </div>
+            <button
+              class=" text-lg lg:hover:cursor-pointer font-bold flex items-center justify-center rounded-2xl bg-limeColor py-2 mt-5 gap-1.5 w-full lg:w-1/2">
+              <img src="../assets/images/icon-calculator.svg" alt="calculator">
+              Calculate Repayments
+            </button>
+          </section>
+        </section>
+      </main>
+    </div>
+    <div class="bg-resultBackground py-8 px-5 lg:flex-grow lg:rounded-bl-[4rem]">
+      <section>
+        <div class="flex justify-center">
+          <img src="../assets/images/illustration-empty.svg" alt="calculator-img" class="">
+        </div>
+        <div class="text-white text-center">
+          <h1 class="font-plusjakartaSansBold text-2xl my-3">Results shown here</h1>
+          <p class="text-lg"> Complete the form and click “calculate repayments” to see what
+            your monthly repayments would be.</p>
+        </div>
+      </section>
+    </div>
+    <footer>
+    </footer>
+  </div>
+            <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Olaitan Hazeem Gbenga</a>.
+      </div>
+  <!-- <script src="main.js
+  "></script> -->
+</body>
+
+</html>

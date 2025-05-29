@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: PlusjakartaSans ;
+  src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: PlusjakartaSan-Italics;
+  src: url(../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: PlusjakartaSan-bold;
+  src: url(../assets/fonts/static/PlusJakartaSans-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: PlusjakartaSan-medium;
+  src: url(../assets/fonts/static/PlusJakartaSans-Medium.ttf);
+  font-weight: medium;
+}
+
+@theme {
+  --font-PlusjakartaSans: PlusjakartaSans;
+  --font-plusjakartaSansBold: PlusjakartaSan-bold;
+  --font-plusjakartaSansMedium: PlusjakartaSan-medium;
+  --color-limeColor:hsl(61, 70%, 52%);
+  --color-inputTextColor:hsl(200, 26%,54%);
+  --color-resultBackground:hsl(202, 55%, 16%);
+  --color-inputTextBackground:hsl(202,86%,94%)
+}
