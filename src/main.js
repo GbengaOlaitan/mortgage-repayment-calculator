@@ -1,22 +1,25 @@
 "use strict";
-//Make the focus on the inputElement
-const inputELement = document.querySelectorAll(".js-input");
-const inputElementContainer = document.querySelector(".js-inputElementContainer");
+const calcButton = document.querySelector('.js-calculate');
+const mAmount = document.querySelector('.js-m-amount');
+const mTerm = document.querySelector('.js-m-term')
+const interest = document.querySelector('.js-interest')
+const mResult = document.querySelector('.js-result')
 
+calcButton.addEventListener('click',()=>{
+    const resultSection = document.querySelector('.js-result-section');
+    const displaySection = document.querySelector('.js-display-section');
+    displaySection.classList.add('hidden')
+   resultSection.classList.remove('hidden');
+  const interestRate =  Number(interest.value / 100);
+  const mAmountValue = Number(mAmount.value);
+  const mTermValue = Number(mTerm.value);
+  const interestPa = interestRate * mTermValue;
+  const interestAmount = mAmountValue * interestPa;
+  const monthlyRepayments = (((interestAmount+mAmountValue)/mTermValue)/ 12).toFixed(2);
+    const mRepayments = `<span>&#x20A6</span>${monthlyRepayments}`;
+  mResult.innerHTML = mRepayments;
+  const tResult = document.querySelector('.js-total-result');
+  const totalRepayment = (interestAmount+mAmountValue);
+    tResult.innerHTML = `<span>&#x20A6</span>${totalRepayment}`
 
-inputELement.forEach((input) => {
-  input.addEventListener("click", () => {
-    const man = document.querySelector('.js-input');
-    man.closest('.js-inputElementContainer').style.borderColor = 'yellow'
-
-    // inputElementContainer.forEach((container) => {
-    //   container.style.borderColor = "hsl(61, 70%, 52%)";
-    // });
-    // const inputTextBackground = document.querySelectorAll(
-    //   ".js-inputTextBackground "
-    // );
-    // inputTextBackground.forEach((background) => {
-    //   background.style.backgroundColor = "hsl(61, 70%, 52%)";
-    // });
-  });
-});
+})

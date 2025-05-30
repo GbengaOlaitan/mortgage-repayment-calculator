@@ -22,6 +22,7 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -37,12 +38,12 @@
         <section>
           <label for="mortgage-amount" class="font-plusjakartaSansMedium text-inputTextColor">Mortgage Amount</label>
           <div
-            class="js-inputElementContainer flex border-1 border-inputTextBackground rounded-md shadow-md mb-4 mt-2 lg:hover:cursor-pointer lg:hover:border-limeColor">
+            class="js-inputElementContainer flex border-1 border-inputTextBackground rounded-md shadow-md mb-4 mt-2 lg:hover:cursor-pointer">
             <div
               class="js-inputTextBackground bg-inputTextBackground py-1 px-2 font-plusjakartaSansBold font-bold text-inputTextColor">
               &#x20A6
             </div>
-            <input class="js-input flex-grow focus: outline-0 pl-3 lg:hover:cursor-pointer" type="text"
+            <input class="js-input js-m-amount flex-grow focus: outline-0 pl-3 lg:hover:cursor-pointer" type="text"
               id="mortgage-amount">
           </div>
           <div class="lg:flex gap-5">
@@ -50,7 +51,7 @@
               <div for="mortgage-term" class="font-plusjakartaSansMedium text-inputTextColor">Mortgage Term</div>
               <div
                 class="js-inputElementContainer flex border-1 justify-between border-inputTextBackground rounded-md shadow-md mb-4 mt-2">
-                <input class="js-input flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
+                <input class="js-m-term flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
                   id="mortgage-term">
                 <div class="js-inputTextBackground bg-inputTextBackground text-inputTextColor py-1 px-2 font-bold">Years
                 </div>
@@ -60,8 +61,8 @@
               <div for="interest-rate" class="text-inputTextColor font-plusjakartaSansMedium">Interest Rate</div>
               <div
                 class="js-inputElementContainer flex border-1 justify-between border-inputTextBackground rounded-md shadow-md mb-4 mt-2">
-                <input class="js-input flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
-                  id="interest-rate">
+                <input class="js-interest flex-grow focus:outline-0 lg:hover:cursor-pointer pl-3" type="text"
+                  id="interest-rate" value="2.3" disabled>
                 <div class="js-inputTextBackground bg-inputTextBackground py-1 px-2 text-inputTextColor font-bold">%
                 </div>
               </div>
@@ -82,7 +83,7 @@
               </label>
             </div>
             <button
-              class=" text-lg lg:hover:cursor-pointer font-bold flex items-center justify-center rounded-2xl bg-limeColor py-2 mt-5 gap-1.5 w-full lg:w-1/2">
+              class="js-calculate text-lg lg:hover:cursor-pointer font-bold flex items-center justify-center rounded-2xl bg-limeColor py-2 mt-5 gap-1.5 w-full lg:w-1/2">
               <img src="../assets/images/icon-calculator.svg" alt="calculator">
               Calculate Repayments
             </button>
@@ -90,8 +91,8 @@
         </section>
       </main>
     </div>
-    <div class="bg-resultBackground py-8 px-5 lg:flex-grow lg:rounded-bl-[4rem]">
-      <section>
+    <div class="bg-resultBackground py-8 px-8 lg:flex-grow lg:rounded-bl-[4rem]">
+      <section class="js-display-section">
         <div class="flex justify-center">
           <img src="../assets/images/illustration-empty.svg" alt="calculator-img" class="">
         </div>
@@ -101,16 +102,31 @@
             your monthly repayments would be.</p>
         </div>
       </section>
+      <section class="js-result-section hidden">
+        <div class="text-white">
+          <h1 class="font-plusjakartaSansBold text-2xl my-3"> Your Result</h1>
+          <p>Your Results are shown here below based on the information you provided. To adjust the result, edit the
+            forms and click on "Calculate Repayments" again.</p>
+        </div>
+        <div class=" flex flex-col text-white border-t-4 border-t-limeColor font-PlusjakartaSans bg-[hsl(201,56%,10%)] mt-8 px-6 py-6 rounded-sm">
+          <div class="border-b-1">
+            <p class="pb-3">Your monthly repayments</p>
+            <p class="js-result text-5xl pb-5 text-limeColor">1,797.74</p>
+          </div>
+          <div class="mt-5">
+            <p>Total you will repay over the term</p>
+            <p class="js-total-result font-plusjakartaSansBold"><span>&#x20A6</span>539,322.94</p>
+          </div>
+        </div>
+      </section>
     </div>
     <footer>
     </footer>
   </div>
-            <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="#">Olaitan Hazeem Gbenga</a>.
-      </div>
-  <!-- <script src="main.js
-  "></script> -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Olaitan Hazeem Gbenga</a>.
+  <div>
 </body>
 
 </html>
