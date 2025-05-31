@@ -53,6 +53,7 @@ const clearButton = document.querySelector(".js-clear");
 clearButton.addEventListener("click", () => {
   mAmount.value = "";
   mTerm.value = "";
+  interest.value = "";
     displaySection.classList.remove("hidden");
   resultSection.classList.add("hidden");
 });
